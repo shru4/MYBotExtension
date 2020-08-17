@@ -1,0 +1,39 @@
+{
+    "manifestVersion": 1,
+    "id": "Shruti",
+    "publisher": "Shruti",
+    "version": "1.0",
+    "name": "My Bot Extension",
+    "description": "A sample Visual Studio Services extension with Integrated AI BOT",
+    "public": false,
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "MyBot",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-code-web.code-hub-group"
+            ],
+            "properties": {
+                "name": "My AI Bot",
+                "uri": "MyBot.html"
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "MyBot.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ]
+}
